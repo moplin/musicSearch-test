@@ -22,3 +22,7 @@ Some other
 by Pablo Palacios  
 [linkedin](https://www.linkedin.com/in/moplin/)  
 [jsfiddle](http://jsfiddle.net/user/moplin/fiddles/)  
+
+<!---
+Now on development
+-->
