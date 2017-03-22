@@ -37,6 +37,8 @@ gulp build
 [Document](https://docs.google.com/document/d/1iAIoVCVNkNxbrWKZdeiLfsujEC0CIeZV3Wp_aTqiU00/edit#heading=h.52d0fjtpdj3k)  
 [Assets](https://bitbucket.org/compucorp/recruitment-music-search/overview)
 
+[Heroku App](http://music-search-moplin.herokuapp.com)  
+_This us build using CodeShip where I do some Continuous Integration and Continuous Deployment_
 
 Some other
 * Trying to stick to Jhon Papa's Code Guide

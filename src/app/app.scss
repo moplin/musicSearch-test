@@ -1,15 +1,26 @@
-$body-color: #212121;
 
-// Body
+// general variable settings
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #333;
+$primary-font-color: #333;
+$secondary-font-color: #333;
+$primary-background-color: #eeeeee;
+$secondary-background-color: #333;
+
+/**
+ * music search sass/css file
+ */
+/*app.scss*/
 body {
-  color: #212121;
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $primary-background-color;
 }
 
 
-/**
- *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
- *  all your sass files automatically
- */
+////// Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+////// all your sass files automatically
 
 // injector
 // endinjector
