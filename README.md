@@ -20,5 +20,5 @@ Some other
 * Trying to stick to Jhon Papa's Code Guide
 
 by Pablo Palacios  
-[linkedin](https://www.linkedin.com/feed//moplin)  
+[linkedin](https://www.linkedin.com/in/moplin/)  
 [jsfiddle](http://jsfiddle.net/user/moplin/fiddles/)  
