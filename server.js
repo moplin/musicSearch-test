@@ -12,9 +12,10 @@ app.use(express.static(__dirname + '/dist'));
 app.get('/', function(req, res) {
 
     // make sure index is in the right directory. In this case /app/index.html
-    res.render('index.html');
+    res.render('');
 });
 
 app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
+    console.log('Our app is running on +++ http://localhost:' + port +' ++');
+    console.log('Pablo Palacios');
 });
