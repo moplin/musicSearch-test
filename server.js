@@ -6,14 +6,15 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 // make express look in the public directory for assets (css/js/img)
-//app.use(express.static(path.join(__dirname + '/dist')));
-app.use(express.static(process.env.PWD + '/dist'));
+app.use(express.static(path.join(__dirname + '/dist')));
+//app.use(express.static(process.env.PWD + '/dist'));
 
 // set the home page route
 app.get('/', function(req, res) {
 
     // make sure index is in the right directory. In this case /app/index.html
-    res.render('index');
+    //res.render('index');
+    res.sendfile('index.html', {root: __dirname })
 });
 
 app.listen(port, function() {
