@@ -11,7 +11,7 @@
             'angularMoment',
             'ngStorage',
             //Main app
-            'app.music-search'
+            'app.musicsearch'
         ])
         .constant('API_CONFIG', {
             'url': '',
