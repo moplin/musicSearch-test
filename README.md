@@ -1,15 +1,15 @@
 # Music Search - Code project
 This app is built on Angular as to demonstrate some angular / js / html / css / gulp and others knoledge.
 
-###Install, run
+## Install, run
 nmp install  
 bower install  
 gulp serve  
 
-###To build
+## To build
 gulp build
 
-###The project takes care of
+## The project takes care of
 * Angularjs
 * NPM / Bower managment
 * Gulp for internal development pipeline
