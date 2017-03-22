@@ -5,6 +5,7 @@
 
     /* @ngInject */
     function ErrorPageController($log, $location) {
+        $log.log('ErrorPageController');
         var vm = this;
         vm.goHome = goHome;
 
@@ -16,7 +17,7 @@
             //$cookies.remove('fm-user');
             //$cookies.remove('io');
             //$http.defaults.headers.common.Authorization = '';
-            $location.path('/index');
+            $location.path('/');
         }
     }
 })();

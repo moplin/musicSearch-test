@@ -2,26 +2,26 @@
     'use strict';
 
     angular
-        .module('app.music-search')
+        .module('app.musicsearch')
         .config(moduleConfig);
 
     /* @ngInject */
     function moduleConfig($stateProvider) {
 
         $stateProvider
-            .state('music-search.music-search', {
-                abstract: true,
-                views: {
-                },
-                data: {
-                }
-            })
 
-        .state('music-search.index', {
-            url: '/index',
-            templateUrl: 'app/music-search/index.tmpl.html',
-            controller: 'IndexController',
-            controllerAs: 'vm'
-        });
+            .state('index', {
+                url: '/',
+                views: {
+                    'root': {
+                        templateUrl: 'app/music-search/index/index.tmpl.html',
+                        controller: 'IndexController',
+                        controllerAs: 'vm'
+                    }
+                }
+            });
     }
-})();
+
+    })();
+
+

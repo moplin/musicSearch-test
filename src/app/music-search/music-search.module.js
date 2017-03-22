@@ -2,6 +2,6 @@
     'use strict';
 
     angular
-        .module('app.music-search', [
+        .module('app.musicsearch', [
         ]);
 })();

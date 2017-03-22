@@ -1,6 +1,21 @@
 # Music Search - Code project
-This app is buiolt as a desmostration of knoledge
+This app is built on Angular as to demonstrate some angular / js / html / css / gulp and others knoledge.
+
+##Install, run##
+nmp install
+bower install
+gulp serve
+
+##To build##
+gulp build
+
+The project takes care of
+* Angularjs
+* NPM / Bower managment
+* Gulp for internal development pipeline
 
 
-The project will take care off
-*
+Some other
+* Trying to stick to Jhon Papa's Code Guide
+
+-by Pablo Palacios-

@@ -41,8 +41,8 @@
                     }
                 }
             });
-        $urlRouterProvider.when('', '/index');
-        $urlRouterProvider.when('/', '/index');
+        $urlRouterProvider.when('', '/');
+        $urlRouterProvider.when('/', '/');
         $urlRouterProvider.otherwise('/404');
     }
 })();

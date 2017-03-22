@@ -5,8 +5,9 @@
         .module('app')
         .run(runFunction);
 
-    function runFunction($rootScope, $localStorage, API_CONFIG, $state) {
+    function runFunction($log, $rootScope, API_CONFIG, $state) { //$localStorage
 
+        $log.log('runFunction');
         /*if ($localStorage.uData) {
             $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.uData.token;
         }*/
