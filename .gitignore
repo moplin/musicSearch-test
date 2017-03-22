@@ -54,6 +54,6 @@ jspm_packages/
 #Some other like sist
 dist/
 .idea/
-.tmp/
 coverage/
+.tmp/
 
