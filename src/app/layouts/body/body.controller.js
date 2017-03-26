@@ -15,18 +15,10 @@
 
     angular
         .module('app.musicsearch')
-        .controller('BodyStateController', BodyStateController);
+        .controller('BodyController', BodyController);
 
     /* @ngInject */
-    function BodyStateController($log) {
-        $log.log('BodyStateController');
-        //var loadingQueue = [];
-        //var vm = this;
-
-        //////////////// Functions
-
-
-        // watches
+    function BodyController() {
 
     }
 })();
