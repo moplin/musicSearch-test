@@ -6,7 +6,7 @@
         beforeEach(module('app'));
 
         it('hw should be helloWorld', inject(function($controller) {
-            var vm = $controller('ProfileController');
+            var vm = $controller('IndexController');
 
             expect(vm.hw === 'helloWorld').toBeTruthy();
 
