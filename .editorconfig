@@ -1,19 +1,31 @@
-# http://editorconfig.org
-root = true
-
 [*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+charset=utf-8
+end_of_line=crlf
+insert_final_newline=false
+indent_style=space
+indent_size=4
 
-[*.md]
-trim_trailing_whitespace = false
+[{.babelrc,.stylelintrc,.eslintrc,jest.config,*.json,*.jsb3,*.jsb2,*.bowerrc}]
+indent_style=space
+indent_size=2
 
-[*.tmpl.html]
-indent_size = 4
+[{jshint.json,*.jshintrc}]
+indent_style=space
+indent_size=2
+
+[*.less]
+indent_style=space
+indent_size=2
 
 [*.scss]
-indent_size = 2
+indent_style=space
+indent_size=2
+
+[*.coffee]
+indent_style=space
+indent_size=2
+
+[{.analysis_options,*.yml,*.yaml}]
+indent_style=space
+indent_size=2
+
