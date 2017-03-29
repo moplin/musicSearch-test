@@ -1,0 +1,115 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpotifyMusicSearch",
+		"_postman_id": "104cd2b2-d0c3-c184-8c5e-216a4f8baf3e",
+		"description": "Searching for new music",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Search Albun/Artist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 2000ms\"] = responseTime < 2000;",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.spotify.com/v1/search?q=megadeth&type=album,artist&market=EC&limit=4&offset=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "general query for spotify\nAlbums and Artist"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Top-tracks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 2000ms\"] = responseTime < 2000;",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB/top-tracks?country=EC",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get the top tracks of the artist"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Artist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 2000ms\"] = responseTime < 2000;",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get the artost info"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Album",
+			"request": {
+				"url": "https://api.spotify.com/v1/albums/3A4zAmE5c4dUAAqEJz6hCH",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Get the album data"
+			},
+			"response": []
+		}
+	]
+}

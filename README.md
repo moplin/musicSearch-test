@@ -50,7 +50,10 @@ gulp build
 ### Some other info
 [Heroku App](http://music-search-moplin.herokuapp.com)  
 [Github project Page](https://moplin.github.io/musicSearch-test/)  
-
+[Postman test for project](https://www.getpostman.com/collections/378371f177930b68cc00)  
+[Test 1 jsfiddle](http://jsfiddle.net/moplin/6qy6cfat/)
+[Test 2 jsfiddle](http://jsfiddle.net/moplin/c020mLL4/)
+[CSS TEST jsfiddle](https://jsfiddle.net/moplin/c95ab9mj/)
 _This us build using CodeShip where I do some Continuous Integration and Continuous Deployment_
 
 Some other
