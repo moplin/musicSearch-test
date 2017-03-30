@@ -64,5 +64,15 @@ by Pablo Palacios
 [jsfiddle](http://jsfiddle.net/user/moplin/fiddles/)  
 
 <!---
-Now on development
+Principles considered:
+1. Code organized and clean (inside modules you will find distribution inside views
+2. Prepared for modularity (main app in src/app/music-search)
+3. I will do my best to keep controllers simple (DOM interactions or data manipulation)
+4. Directives when needed 
+  5. Data processing should always be kept in models (my services), that way they can easily be shared between controllers and other services.
+  6. Separate server interaction and error handling from the model -contained functions-
+7. prefere to use getters / setters for data inter comunication   
+8. workflow automated with gulp - bower (for asset pipeline)
+
+Obviusly tring to mantain Style - {Angular 1 Style Guide - johnpapa}
 -->
