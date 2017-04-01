@@ -1,0 +1,665 @@
+///////////////////////////////////////
+// Generado por Pablo Palacios
+//////////////////////////////////////
+/**
+* Main.scss para Music Search
+*/
+@import "variables";  //variables
+@import "media";  //variables
+@import "reset";  //Reset
+@import "mixin";  //variables
+
+
+///////////////////
+// GENERALES
+//////////////////
+/*Generales*/
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+body, html {
+  height: 100%;
+  overflow:auto;
+}
+
+body {
+  margin: 0 0 0 0;
+  font-family: $ms-font-primary;
+  font-size: $ms-font-regular;
+  color:$primary-color;
+  background-color: $bg1-color;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center
+}
+
+///////////////////
+// GRID
+//////////////////
+/*grid*/
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+img.rez {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+img.cent {
+  display:block;
+  margin:auto;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper, .ms-row {
+  @extend %clearfix;
+}
+
+[class*='ms-col-'] {
+  float: left;
+  padding: 5px;
+  width: 100%;
+  min-height: 1px;
+}
+
+@media #{$breakpoint-medium} { //480px
+  .wrapper {
+    width: 95%;
+    max-width: $grid-max-width; //+1000px
+  }
+  @for $i from 1 through $grid-columns {
+    .ms-col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+// hacking my own grid for HERO
+
+#ms-hero1{
+  display: none;
+  visibility: hidden;
+  background-color: $bg2-color;
+  @include sm-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include smd-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include md-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include lg-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include xl-sc {
+    display: block;
+    visibility: visible;
+  }
+}
+
+#ms-hero2{
+  display: block;
+  visibility: visible;
+  background-color: $bg2-color;
+  @include sm-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include smd-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include md-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include lg-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include xl-sc {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* eo-grid*/
+
+///////////////////
+// CUERDO
+//////////////////
+/*cuerpo*/
+
+div#ms-body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#ms-content {
+  color: $font-regular;
+  display: inline-block;
+  @include sm-sc {
+    width: 98% ;
+  }
+  @include smd-sc {
+    width: 90% ;
+  }
+  @include md-sc {
+    width: 90% ;
+  }
+  @include lg-sc {
+    width: 90% ;
+  }
+  @include xl-sc {
+    width: 1440px ;
+  }
+}
+
+
+
+
+a:hover#ms-ref {
+  background-color: $ms-buttons-bg-hover;
+}
+
+a:link#ms-ref {
+  background-color: $ms-buttons-bg;
+}
+
+
+
+////////////////
+// Imagenes
+#ms-id-img-page_1 {
+  height: 50% !important;
+  width: 50% !important;
+  @include sm-sc {
+    //width: 70%;
+  }
+  @include smd-sc {
+    //width: 75%;
+  }
+  @include md-sc {
+    //width: 80%;
+  }
+  @include lg-sc {
+    //width: 85%;
+  }
+  @include xl-sc {
+    //width: 90%;
+  }
+}
+#ms-id-img-logo {
+  height: 120px;
+  width: auto;
+
+  @include sm-sc {
+    //width: 70%;
+  }
+  @include smd-sc {
+    //width: 75%;
+  }
+  @include md-sc {
+    //width: 80%;
+  }
+  @include lg-sc {
+    //width: 85%;
+  }
+  @include xl-sc {
+    //width: 90%;
+  }
+}
+
+#ms-id-img-logo2 {
+  height: auto !important;
+  width: 56px !important;
+
+
+}
+
+#ms-id-img-page_12 {
+  height: 45px !important;
+  width: auto !important;
+
+
+}
+
+#ms-id-img-hero {
+  height: 50% !important;
+  width: 50% !important;
+}
+
+
+//// HERO
+div#ms-id-hero {
+  background-color: $bg2-color;
+}
+
+.ms-hero-image {
+  /* The image used */
+  //background-image: url("https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg");
+
+  /* Set heights */
+  height: 500px !important;
+
+  //@include bp-small {
+  //  height: 400px !important;
+  //}
+
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#ms-hero-img {
+  background-image: url("/assets/images/hero-img@2x.png");
+  width: 450px;
+  height: 325px;
+  background-size: 450px;
+}
+
+
+
+/* Place text in the middle of the image */
+.ms-hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#ms-head {
+  background-color: $bg2-color;
+}
+
+
+/////// SEARCH
+#ms-search-bar {
+  background-color: $bg1-color;
+}
+
+#ms-search-results {
+  background-color: $bg3-color;
+}
+#ms-search-foot {
+  background-color: $bg3-color;
+}
+
+#ms-id-footer-txt {
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+div#ms-foot {
+  height: 100px;
+  background-color: $bg1-color;
+}
+
+
+
+/////////////////////
+// search control
+
+input#ms-search-input {
+
+  width: 65%;
+  background-color: white;
+  border-image: initial;
+  text-align: left;
+  margin: 5px 0 5px -4px;
+  border-radius: 50px 50px 50px 50px;
+  padding: 8px 0 8px 20px;
+  border: 0 none transparent;
+  height: 40px;
+
+  @include sm-sc {
+    width: 70%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include smd-sc {
+    width: 75%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include md-sc {
+    width: 80%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include lg-sc {
+    width: 85%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include xl-sc {
+    width: 90%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+}
+
+span#ms-button-box {
+  width: 70%;
+  float: left;
+  margin: 0 0 0 0;
+  border-radius: 0 0 0 0;
+  border: 0 none transparent;
+  background-color: transparent;
+  height: 0;
+  padding: 0 0 0 0;
+
+
+  @include sm-sc {
+    width: 70%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include smd-sc {
+    width: 75%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include md-sc {
+    width: 80%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include lg-sc {
+    width: 85%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include xl-sc {
+    width: 90%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+}
+
+button#ms-search-button {
+  height: 40px;
+  width: 140px;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: $font-regular-white;
+  background-color: $ms-buttons-bg;
+  text-transform: uppercase;
+  padding: 8px 13px 8px 13px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+
+
+  @include smd-sc {
+    height: 40px;
+    width: 140px;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: $font-regular-white;
+    background-color: $ms-buttons-bg;
+    text-transform: uppercase;
+    padding: 8px 13px 8px 13px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+  }
+  @include md-sc {
+    height: 45px;
+  }
+  @include lg-sc {
+    height: 45px;
+  }
+  @include xl-sc {
+    height: 45px;
+  }
+
+
+}
+button#ms-search-button:hover {
+  color: $font-regular-white;
+  background-color: $ms-buttons-bg-hover;
+  border-color: transparent;
+}
+
+div#ms-searchbox-container {
+  margin: auto;
+  height: 85px;
+  @include sm-sc {
+    height: 45px;
+  }
+  @include smd-sc {
+    height: 45px;
+  }
+  @include md-sc {
+    height: 45px;
+  }
+  @include lg-sc {
+    height: 45px;
+  }
+  @include xl-sc {
+    height: 45px;
+  }
+}
+
+
+/*Footer*/
+span#ms-footer-txt {
+  color: $font-regular;
+  /* text-align: left; */
+  left: auto;
+  right: 50%;
+  position: absolute;
+  align-content: center;
+  background-color: #cccccc;
+}
+
+
+span#ms-sb-title {
+  font-size: $ms-font-large;
+  color: $font-regular;
+  text-transform: uppercase;
+  font-family: $ms-font-primary;
+}
+
+span#ms-sb-sub-title {
+  font-family: $ms-font-secondary;
+  font-size: $ms-font-medium !important;
+  color: $font-light;
+}
+
+
+
+
+
+
+////// Centers
+
+.centered-v {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+}
+
+.centered-h {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.outer-div {
+  padding: 0px;
+}
+
+.center-div {
+  margin: auto;
+}
+
+*:focus {
+  outline: none;
+}
+
+input#ms-search-input::-webkit-input-placeholder { color:$placeholder;}
+input#ms-search-input:-moz-placeholder {color:$placeholder;}
+input#ms-search-input:-ms-input-placeholder {color:$placeholder;}
+input#ms-search-input:-moz-placeholder {color:$placeholder;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ms-header {
+  background-color: grey;
+  color: black;
+  padding: 15px;
+}
+span#ms-search-span-parent {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+////////////card
+////////CARD
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+//HOVER a
+.card {
+  background:grey;
+  float:left;
+  position:relative
+}
+.card:hover .play{display:block}
+.play{
+  position : absolute;
+  display:none;
+  top:40%;
+  width:50px;
+  margin:0 auto; left:0px;
+  right:0px;
+  z-index:100;
+  cursor: pointer;
+}
+
+
+.sppower {
+  color: white;
+}
+
+
+.centre-sc {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
