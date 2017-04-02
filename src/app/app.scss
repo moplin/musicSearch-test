@@ -1,26 +1,852 @@
-
-// general variable settings
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
-$secondary-color: #333;
-$primary-font-color: #333;
-$secondary-font-color: #333;
-$primary-background-color: #eeeeee;
-$secondary-background-color: #333;
-
+///////////////////////////////////////
+// Generado por Pablo Palacios
+//////////////////////////////////////
 /**
- * music search sass/css file
- */
-/*app.scss*/
+* Main.scss para Music Search
+*/
+@import "scss/variables";  //variables
+@import "scss/media";  //variables
+@import "scss/reset";  //Reset
+@import "scss/mixin";  //variables
+
+
+///////////////////
+// GENERALES
+//////////////////
+/*Generales*/
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+body, html {
+  height: 100%;
+  overflow:auto;
+}
+
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
-  background-color: $primary-background-color;
+  margin: 0 0 0 0;
+  font-family: $ms-font-primary;
+  font-size: $ms-font-regular;
+  color:$primary-color;
+  background-color: $bg1-color;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center
+}
+
+///////////////////
+// GRID
+//////////////////
+/*grid*/
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+img.rez {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+img.cent {
+  display:block;
+  margin:auto;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper, .ms-row {
+  @extend %clearfix;
+}
+
+[class*='ms-col-'] {
+  float: left;
+  padding: 5px;
+  width: 100%;
+  min-height: 1px;
+}
+
+@media #{$breakpoint-medium} { //480px
+  .wrapper {
+    width: 95%;
+    max-width: $grid-max-width; //+1000px
+  }
+  @for $i from 1 through $grid-columns {
+    .ms-col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+/* eo-grid*/
+
+////////////////////////////////////////////////////////////
+// BODY & CONTENT
+///////////////////////////////////////////////////////////
+/*cuerpo*/
+
+div#ms-body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#ms-hero-content {
+  color: $font-regular;
+  display: inline-block;
+  @include sm-sc {
+    width: 98% ;
+  }
+  @include smd-sc {
+    width: 90% ;
+  }
+  @include md-sc {
+    width: 90% ;
+  }
+  @include lg-sc {
+    width: 90% ;
+  }
+  @include xl-sc {
+    width: 1440px ;
+  }
+}
+
+#ms-content {
+  color: $font-regular;
+  display: inline-block;
+  @include sm-sc {
+    width: 98% ;
+  }
+  @include smd-sc {
+    width: 90% ;
+  }
+  @include md-sc {
+    width: 90% ;
+  }
+  @include lg-sc {
+    width: 90% ;
+  }
+  @include xl-sc {
+    width: 1440px ;
+  }
+}
+
+a:hover#ms-ref {
+  background-color: $ms-buttons-bg-hover;
+}
+
+a:link#ms-ref {
+  background-color: $ms-buttons-bg;
+}
+
+.cent-dv {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+////////////////////////////////////////////////////////////
+// IMAGES
+///////////////////////////////////////////////////////////
+#ms-id-img-page_1 {
+  height: 55px !important;
+  width: auto !important;
+}
+#ms-id-img-logo {
+  height: 55px;
+  width: auto;
+
+  @include sm-sc {
+    height: 560px;
+    width: auto;
+  }
+  @include smd-sc {
+    height: 70px;
+    width: auto;
+  }
+  @include md-sc {
+    height: 85px;
+    width: auto;
+  }
+  @include lg-sc {
+    height: 95px;
+    width: auto;
+  }
+  @include xl-sc {
+    height: 110px;
+    width: auto;
+  }
+}
+
+#ms-id-img-logo2 {
+  height: auto !important;
+  width: 56px !important;
+}
+
+#ms-id-img-page_12 {
+  height: 45px !important;
+  width: auto !important;
+}
+
+#ms-id-img-hero {
+  height: 50% !important;
+  width: 50% !important;
+}
+
+.sppower {
+  color: $font-regular-white;
+  font-size: $ms-font-regular;
+  @include lg-sc {
+    font-size: $ms-font-regular +2;
+  }
+  @include xl-sc {
+    font-size: $ms-font-regular +3;
+  }
+}
+////////////////////////////////////////////////////////////
+// HERO DEFINITIONS
+///////////////////////////////////////////////////////////
+#ms-id-hero {
+  background-color: $bg2-color;
+}
+
+#ms-hero1{
+  display: none;
+  visibility: hidden;
+  background-color: $bg2-color;
+
+  @include smd-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include md-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include lg-sc {
+    display: block;
+    visibility: visible;
+  }
+  @include xl-sc {
+    display: block;
+    visibility: visible;
+  }
+}
+
+#ms-hero2{
+  display: block;
+  visibility: visible;
+  background-color: $bg2-color;
+
+  @include smd-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include md-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include lg-sc {
+    display: none;
+    visibility: hidden;
+  }
+  @include xl-sc {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 
-////// Do not remove this comments bellow. It's the markers used by gulp-inject to inject
-////// all your sass files automatically
+.ms-hero-image {
+  /* The image used */
+  //background-image: url("https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg");
 
-// injector
-// endinjector
+  /* Set heights */
+  height: 500px !important;
+
+  //@include bp-small {
+  //  height: 400px !important;
+  //}
+
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+////////////////////////////////////////////////////////////
+// OTHER DEFS
+///////////////////////////////////////////////////////////
+#ms-head {
+  background-color: $bg2-color;
+}
+
+#ms-search-results {
+  background-color: $bg1-color;
+
+  @include smd-sc {
+    background-color: $bg3-color;
+  }
+  @include md-sc {
+    background-color: $bg3-color;
+  }
+  @include lg-sc {
+    background-color: $bg3-color;
+  }
+  @include xl-sc {
+    background-color: $bg3-color;
+  }
+
+
+
+
+}
+#ms-search-foot {
+
+
+  background-color: $bg1-color;
+
+  @include smd-sc {
+    background-color: $bg3-color;
+  }
+
+  @include md-sc {
+    background-color: $bg3-color;
+  }
+  @include lg-sc {
+    background-color: $bg3-color;
+  }
+  @include xl-sc {
+    background-color: $bg3-color;
+  }
+
+
+
+}
+
+#ms-id-footer-txt {
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#ms-foot {
+  height: 100px;
+  background-color: $bg1-color;
+}
+
+.ms-header {
+  background-color: grey;
+  color: black;
+  padding: 15px;
+}
+#ms-search-span-parent {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+////////////////////////////////////////////////////////////
+// SEARCH CONTROL
+///////////////////////////////////////////////////////////
+#ms-search-bar {
+  background-color: $bg1-color;
+}
+
+#ms-search-input {    ////////// S INPUT
+  width: 65%;
+  background-color: white;
+  border-image: initial;
+  text-align: left;
+  margin: 5px 0 12px 0;
+  border-radius: 50px 50px 50px 50px;
+  padding: 8px 0 8px 20px;
+  border: 0 none transparent;
+  height: 40px;
+  @include smd-sc {
+    width: 55%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include md-sc {
+    width: 75%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include lg-sc {
+    width: 75%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+  @include xl-sc {
+    width: 80%;
+    background-color: white;
+    border-image: initial;
+    text-align: left;
+    margin: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+    padding: 8px 0 8px 20px;
+    border: 0 none transparent;
+    height: 40px;
+  }
+}
+
+#ms-button-box {   ///////////// B BOX
+  width: 100%;
+  float: left;
+  margin: 0 0 0 0;
+  border-radius: 0 0 0 0;
+  border: 0 none transparent;
+  background-color: transparent;
+  height: 0;
+  padding: 0 0 0 0;
+  @include sm-sc {
+    width: 70%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include smd-sc {
+    width: 75%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include md-sc {
+    width: 80%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include lg-sc {
+    width: 85%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+  @include xl-sc {
+    width: 90%;
+    float: inherit;
+    margin: 5px 5px 5px -5px;
+    border-radius: 0 50px 50px 0;
+    border: 0 none transparent;
+    background-color: white;
+    height: 40px;
+    padding: 12px 5px 13px 5px;
+  }
+}
+
+button#ms-search-button {  ////////////// BUTTON
+  height: 40px;
+  width: 140px;
+  text-align: center;
+  cursor: default;
+  color: $font-regular-white;
+  background-color: $ms-buttons-bg;
+  text-transform: uppercase;
+  padding: 8px 13px 8px 13px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  @include smd-sc {
+    height: 35px;
+    text-align: center;
+    cursor: default;
+    color: $font-regular-white;
+    background-color: $ms-buttons-bg;
+    text-transform: uppercase;
+    padding: 8px 13px 8px 13px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+  }
+  @include md-sc {
+    height: 35px;
+  }
+  @include lg-sc {
+    height: 35px;
+  }
+  @include xl-sc {
+    height: 35px;
+  }
+}
+
+button#ms-search-button:hover {  ///// B HOVER
+  color: $font-regular-white;
+  background-color: $ms-buttons-bg-hover;
+  border-color: transparent;
+}
+
+#ms-searchbox-container {  /// SB CONTAINER
+  margin: auto;
+  height: 100px;
+  @include sm-sc {
+    height: 55px;
+  }
+  @include smd-sc {
+    height: 55px;
+  }
+  @include md-sc {
+    height: 55px;
+  }
+  @include lg-sc {
+    height: 55px;
+  }
+  @include xl-sc {
+    height: 55px;
+  }
+}
+
+/*Footer*/
+span#ms-footer-txt {
+  color: $font-regular;
+  left: auto;
+  right: 50%;
+  position: absolute;
+  align-content: center;
+  background-color: #cccccc;
+}
+
+
+span#ms-sb-title {
+  font-size: $ms-font-large;
+  color: $font-regular;
+  text-transform: uppercase;
+  font-family: $ms-font-primary;
+}
+
+span#ms-sb-sub-title {
+  font-family: $ms-font-secondary;
+  font-size: $ms-font-medium !important;
+  color: $font-light;
+}
+
+////////////////////////////////////////////////////////////
+// SMALL FIXES
+///////////////////////////////////////////////////////////
+.outer-div {
+  padding: 0px;
+}
+
+*:focus {
+  outline: none;
+}
+
+input#ms-search-input::-webkit-input-placeholder { color:$placeholder; font-size: $ms-font-regular;}
+input#ms-search-input:-moz-placeholder {color:$placeholder; font-size: $ms-font-regular;}
+input#ms-search-input:-ms-input-placeholder {color:$placeholder; font-size: $ms-font-regular;}
+input#ms-search-input:-moz-placeholder {color:$placeholder; font-size: $ms-font-regular;}
+
+////////////////////////////////////////////////////////////
+// CARD
+///////////////////////////////////////////////////////////
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  float:left;
+  position:relative;
+  border-radius: 3px;
+}
+
+.card:hover{
+  display:flex;
+  @include sm-sc {
+    display:block;
+  }
+  @include smd-sc {
+    display:block;
+  }
+  @include md-sc {
+    display:block;
+  }
+  @include lg-sc {
+    display:block;
+  }
+  @include xl-sc {
+    display:block;
+  }
+  .card-img{
+    background: no-repeat center center fixed;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  .play{
+    display:block;
+    visibility: visible;
+  }
+  .card-hov-txt{
+    color: transparent;
+    visibility: hidden;
+    @include xs-sc {
+      color: white;
+      visibility: visible;
+    }
+    @include sm-sc {
+      color: white;
+      visibility: visible;
+    }
+    @include smd-sc {
+      color: white;
+      visibility: visible;
+    }
+    @include md-sc {
+      color: white;
+      visibility: visible;
+    }
+    @include lg-sc {
+      color: white;
+      visibility: visible;
+    }
+    @include xl-sc {
+      color: white;
+      visibility: visible;
+    }
+  }
+
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 22px;
+  text-align: left;
+
+  @include xs-sc {
+    padding: 12px;
+  }
+  @include sm-sc {
+    padding: 15px;
+  }
+  @include smd-sc {
+    padding: 15px;
+  }
+  @include md-sc {
+    padding: 22px;
+  }
+  @include lg-sc {
+    padding: 22px;
+  }
+  @include xl-sc {
+    padding: 22px;
+  }
+}
+
+.card-img-container {
+  width: 40%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -2px;
+
+  @include xs-sc {
+    width: 100%;
+  }
+  @include sm-sc {
+    width: 100%;
+  }
+  @include smd-sc {
+    width: 100%;
+  }
+  @include md-sc {
+    width: 100%;
+  }
+  @include lg-sc {
+    width: 100%;
+  }
+  @include xl-sc {
+    width: 100%;
+  }
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-text{
+  color: $font-bold;
+  font-size: $ms-font-medium + 2;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.card-hov-txt{
+  color: transparent;
+  visibility: hidden;
+}
+
+.play{
+  position: absolute;
+  display: none;
+  top: 15%;
+  left: 0;
+  width: 25%;
+  margin: 0 auto;
+  z-index: 100;
+  cursor: pointer;
+
+  @include xs-sc {
+    width: 100%;
+  }
+  @include sm-sc {
+    width: 100%;
+  }
+  @include smd-sc {
+    width: 100%;
+  }
+  @include md-sc {
+    width: 100%;
+  }
+  @include lg-sc {
+    width: 100%;
+  }
+  @include xl-sc {
+    width: 100%;
+  }
+
+}
+
+.card-img-play {
+  width: 50%;
+}
+
+.indicator-icon{
+  position : absolute;
+  display:block;
+  bottom: 0px;
+  left: 0px;
+  width:50px;
+  margin:0 auto;
+  z-index:100;
+  cursor: pointer;
+
+  @include xs-sc {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  @include sm-sc {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  @include smd-sc {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  @include md-sc {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  @include lg-sc {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  @include xl-sc {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+}
+
+img.card-indicator-icon {
+  width: 60%;
+  @include xs-sc {
+    width: 25%;
+  }
+  @include sm-sc {
+    width: 25%;
+  }
+  @include smd-sc {
+    width: 25%;
+  }
+  @include md-sc {
+    width: 25%;
+  }
+  @include lg-sc {
+    width: 25%;
+  }
+  @include xl-sc {
+    width: 25%;
+  }
+}
+
+a.card-a {
+  position: relative;
+  text-align: left;
+}
+
+.center-card {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  @include xs-sc {
+    display:block;
+  }
+  @include sm-sc {
+    display:block;
+  }
+  @include smd-sc {
+    display:block;
+  }
+  @include md-sc {
+    display:block;
+  }
+  @include lg-sc {
+    display:block;
+  }
+  @include xl-sc {
+    display:block;
+  }
+}

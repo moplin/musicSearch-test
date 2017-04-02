@@ -10,6 +10,7 @@
             'ngMessages',
             'angularMoment',
             'ngStorage',
+            'ngEasyModal',
             //Main app
             'app.musicsearch'
         ])

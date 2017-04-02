@@ -1,0 +1,75 @@
+///////////////////////
+// MEDIA QUERYS
+//////////////////////
+/* media.scss*/
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+
+///// second stuff - for grid
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 20em) {
+    @content;
+  }
+}
+
+//////////////////
+// 3ra opcion -usar
+@mixin xs-sc {
+  @media (min-width: #{$xs-width}) {
+    @content;
+  }
+}
+
+@mixin sm-sc {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin smd-sc {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin md-sc {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin lg-sc {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin xl-sc {
+  @media (min-width: #{$xl-width}) {
+    @content;
+  }
+}
+/* eo-media.scss*/
