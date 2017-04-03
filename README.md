@@ -63,6 +63,12 @@ Some other
 * Trying to stick to Jhon Papa's Code Guide
 * ''' git subtree push --prefix dist origin gh-pages '''
 
+##TODOS
+* Still need work on the server file to make it pass on heroku
+* I need about 3 more days to finish tests and e2e - Sorry
+* Need to make the popup / modal work better for big screens (about 3 more hours or less)
+* I would like to make the icons of the player behave better
+* I would like to plug the angular Spotify module so I can play with playlists (about 8 hours)
 
 
 
