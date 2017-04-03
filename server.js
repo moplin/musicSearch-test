@@ -13,8 +13,7 @@ app.use(express.static(path.join(__dirname + '/dist')));
 app.get('/', function(req, res) {
 
     // make sure index is in the right directory. In this case /app/index.html
-    //res.render('index');
-    res.sendfile('index.html', {root: __dirname })
+    res.render('in++dex.html');
 });
 
 app.listen(port, function() {

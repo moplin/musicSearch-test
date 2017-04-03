@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Music Search - Proto</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div id="ms-content" >
+    <br>    <br>    <br>    <br>    <br>
+
+
+
+
+    <div class="ms-modal">
+        <div class="modal-head">
+            <div class="ms-row">
+                <div class="ms-col-3" >
+                    <div class="modal-img-container">
+                        <div class="modal-img" style="content:url('https://i.scdn.co/image/8f0b1267ee4a84e260991c25d136ed4be13a8cbe');"></div>
+                    </div>
+                </div>
+                <div class="ms-col-8" id="center-col" style="text-align: left">
+                    <br>
+                    <span class="modal-t1">Tracks on <br><span class="modal-t2">Rise and fall of a genius</span></span>
+
+                </div>
+                <div class="ms-col-1">
+                    <div class="modal-cross"></div>
+                </div>
+            </div>
+        </div>
+        <br><hr><br>
+        <div class="modal-track" style="text-align: left; padding: 8px">
+            <span class="track">ipsum lorem</span>
+        </div>
+        <br>
+    </div>
+
+
+
+
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+    <hr>
+    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>    <br>
+
+    <div class="ms-modal">
+        <img src="">
+        <h1>{{vm.albumModal.title}}</h1>
+        <p>{{vm.albumModal.body}}</p>
+        <hr>
+        <li ng-repeat="al in vm.albumModal.albums"> {{al.album}} {{al.year}}</li>
+        <button ng-click="vm.easyModal.close()">Close</button>
+        <br>
+    </div>
+
+</div>
+</body>
+</html> <!-- https://i.scdn.co/image/8f0b1267ee4a84e260991c25d136ed4be13a8cbe -->

@@ -1,0 +1,44 @@
+// -- Grid
+@import "variables";
+@import "mixin";
+
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper, .ms-row {
+  @extend %clearfix;
+}
+
+[class*='ms-col-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px;
+}
+
+@media #{$breakpoint-medium} { //480px
+  .wrapper {
+    width: 95%;
+    max-width: $grid-max-width; //+1000px
+  }
+  @for $i from 1 through $grid-columns {
+    .ms-col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}

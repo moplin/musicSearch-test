@@ -1,6 +1,6 @@
 'use strict';
 
-describe('The main view', function () {
+describe('Hello World', function () {
   var page;
 
   beforeEach(function () {
@@ -8,8 +8,9 @@ describe('The main view', function () {
     page = require('./main.po');
   });
 
-  it('should include h1 with title', function() {
-    expect(page.h1El.getText()).toBe('helloWorld');
+  it('Should say hi!!', function() {
+    expect(page.hw.getText()).toBe('helloWorld');
   });
+
 
 });

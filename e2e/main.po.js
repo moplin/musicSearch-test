@@ -6,10 +6,8 @@
 'use strict';
 
 var MainPage = function() { 
-  this.index = element(by.css('.ms-index'));
-  //this.h1El = this.jumbEl.element(by.css('h1'));
-  //this.imgEl = this.jumbEl.element(by.css('img'));
-  //this.thumbnailEls = element(by.css('body')).all(by.repeater('awesomeThing in awesomeThings'));
+  this.hw = element(by.css('.ms-index'));
+
 };
 
 module.exports = new MainPage();

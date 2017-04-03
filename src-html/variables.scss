@@ -1,0 +1,74 @@
+//////////////////////////////////
+// VARIABLES
+/////////////////////////////////
+/*variables.scss*/
+
+// General definitions
+
+$primary-color:darkgray;
+$secondary-color:gray;
+$terciary-color:lightgrey;
+
+$bg1-color: #333441;  //Main Background - kind ofgrey
+$bg2-color: #CD4282;  //Kind of magenta
+$bg3-color: #383A49; //Kind of light grey
+$bg4-color: white;
+
+$ms-font-primary:'Montserrat', sans-serif;
+$ms-font-secondary:'Montserrat', sans-serif;
+
+$ms-font-large:20px;
+$ms-font-medium:16px;
+$ms-font-regular:12px;
+$ms-font-small:10px;
+
+$font-bold:#2e2e37;
+$font-regular:gray;
+$font-light:lightgrey;
+$font-lighter: #ebebeb;
+
+$font-regular-white: white;
+
+
+$placeholder: #333441;
+
+$border-color-1:darkgray;
+$border-color-2:gray;
+$border-color-3:lightgrey;
+
+$ms-buttons-bg:#D05D84;
+$ms-buttons-bg-hover:#CD4282;
+
+
+
+// -- grid variables
+$grid-columns: 12;
+//$grid-max-width: 65em;
+$grid-max-width: 65em; //un poco mas de 1000px
+
+
+
+// third option to use
+$xs-width: 460px;
+$sm-width: 481px;
+$smd-width: 641px;
+$md-width: 961px;
+$lg-width: 1025px;
+$xl-width: 1399px;
+//  xsm @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+//  sm  @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+//  smd @media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+//  md  @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+//  lg  @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+//  xl  @media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+
+// -- breakpoints
+$breakpoint-small: "only screen and (min-width: 320px)"; //320px 20em
+$breakpoint-medium: "only screen and (min-width: 460px)"; //480px 30em
+$breakpoint-large: "only screen and (min-width: 960px)"; //960px 60em
+
+//$break-small: 320px;
+//$break-large: 1400px;
+
+/*eo-variables.scss*/
