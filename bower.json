@@ -19,7 +19,12 @@
     "angular-sanitize": "1.5.8",
     "font-awesome": "~4.5.0",
     "angular-ui-router": "^0.3.1",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "angular-audio": "^1.7.3",
+    "lodash": "^4.17.4",
+    "ng-lodash": "^0.5.0",
+    "angular-img-cropper": "^1.1.0",
+    "angular-fontawesome": "^1.0.0"
   },
   "devDependencies": {
     "angular-mocks": "1.5.8"

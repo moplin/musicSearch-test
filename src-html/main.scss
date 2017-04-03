@@ -830,3 +830,78 @@ a.card-a {
     display:block;
   }
 }
+
+//////////////////////
+//MODAL
+.ms-modal {
+  width: 347px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+//IMAGE
+.modal-img-container {
+  overflow: hidden;
+  width: 85px;
+  height: 85px;
+}
+.modal-img {
+  width: 100px;
+  height: auto;
+}
+
+//Cross
+.modal-cross {
+  content: url('assets/images/Cross Dark@2x.png');
+  width: 20px;
+}
+
+.modal-cross:hover {
+  content: url('assets/images/Cross@2x.png');
+  width: 20px;
+}
+
+
+// Central column
+#center-col {
+  padding: 10px;
+}
+
+span.modal-t1 {
+  font-size: 17px;
+  line-height: 1.4;
+
+}
+
+span.modal-t2 {
+  font-weight: 800;
+}
+
+hr {
+  width: 80%;
+  border: none;
+  height: 1px;
+  color: #cccccc;
+  background-color: #cccccc;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -71,6 +71,25 @@ gulp.task('images', function () {
     .pipe(gulp.dest(paths.dist + '/assets/images/'));
 });
 
+
+gulp.task('aCss', function () {
+    return gulp.src(paths.src + '/assets/css/**/*')
+        .pipe(gulp.dest(paths.dist + '/assets/css/'));
+});
+
+gulp.task('js', function () {
+    return gulp.src(paths.src + '/assets/js/**/*')
+        .pipe(gulp.dest(paths.dist + '/assets/js/'));
+});
+
+gulp.task('aFonts', function () {
+    return gulp.src(paths.src + '/assets/Fonts/**/*')
+        .pipe(gulp.dest(paths.dist + '/assets/Fonts/'));
+});
+
+
+
+
 gulp.task('fonts', function () {
   return gulp.src($.mainBowerFiles())
     .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
@@ -100,4 +119,4 @@ gulp.task('clean', function () {
   return $.del([path.join(paths.dist, '/'), path.join(paths.tmp, '/')]);
 });
 
-gulp.task('buildapp', ['html', 'images', 'fonts', 'misc', 'data']);
+gulp.task('buildapp', ['html', 'images', 'js', 'aFonts', 'aCss', 'fonts', 'misc', 'data']);

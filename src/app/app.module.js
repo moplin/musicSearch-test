@@ -11,6 +11,11 @@
             'angularMoment',
             'ngStorage',
             'ngEasyModal',
+            'ngResource',
+            'ngAudio',
+            'ngLodash',
+            'angular-img-cropper',
+            'picardy.fontawesome',
             //Main app
             'app.musicsearch'
         ])
