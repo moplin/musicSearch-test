@@ -52,7 +52,7 @@ jspm_packages/
 .env
 
 #Some other like sist
-dist/
+#dist/
 .idea/
 .tmp/
 
