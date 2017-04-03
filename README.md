@@ -58,6 +58,10 @@ gulp build
 
 Some other
 * Trying to stick to Jhon Papa's Code Guide
+* ''' git subtree push --prefix dist origin gh-pages '''
+
+
+
 
 by Pablo Palacios  
 [linkedin](https://www.linkedin.com/in/moplin/)  

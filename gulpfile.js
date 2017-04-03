@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
-
+var ghPages = require('gulp-gh-pages');
 gulp.paths = {
   src: 'src',
   dist: 'dist',
