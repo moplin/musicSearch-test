@@ -48,6 +48,9 @@ gulp build
 [Assets](https://bitbucket.org/compucorp/recruitment-music-search/overview)
 
 ### Some other info
+
+[APLICATION WORKING GH-PG](https://moplin.github.io/musicSearch-test/dist)   
+
 <!---[Heroku App](http://music-search-moplin.herokuapp.com)  -->
 [Github project Page](https://moplin.github.io/musicSearch-test/)  
 [Postman test for project](https://www.getpostman.com/collections/378371f177930b68cc00)   
