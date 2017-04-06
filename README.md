@@ -48,15 +48,21 @@ gulp build
 [Assets](https://bitbucket.org/compucorp/recruitment-music-search/overview)
 
 ### Some other info
-
-[APLICATION WORKING GH-PG](https://moplin.github.io/musicSearch-test/dist)   
-
-<!---[Heroku App](http://music-search-moplin.herokuapp.com)  -->
 [Github project Page](https://moplin.github.io/musicSearch-test/)  
 [Postman test for project](https://www.getpostman.com/collections/378371f177930b68cc00)   
-[Test 1 jsfiddle](http://jsfiddle.net/moplin/6qy6cfat/)  
-[Test 2 jsfiddle](http://jsfiddle.net/moplin/c020mLL4/)  
-[CSS TEST jsfiddle](https://jsfiddle.net/moplin/c95ab9mj/)  
+[Test 1 jsfiddle - only js to Spotify](http://jsfiddle.net/moplin/6qy6cfat/)  
+[Test 2 jsfiddle - integration with angular](http://jsfiddle.net/moplin/c020mLL4/)  
+[CSS/Scss TEST jsfiddle - making it work](https://jsfiddle.net/moplin/c95ab9mj/)  
+
+
+#Continuous Integration / Delivery / Deployment
+Here I tested some stuff, I deployed the app using GH-Pages (#easypeasy), the used the heroku internal 
+pipelines, and finally I am using all the power of CI/CD from Codeship. I guess nest Playgound will be 
+using Doker.   
+[APLICATION WORKING GH-PG](https://moplin.github.io/musicSearch-test/dist)   
+[Heroku App + Codeship](http://music-search-moplin.herokuapp.com)   
+[Heroku App internal pipelines](https://ms-moplin.herokuapp.com)   
+
 
 
 Some other
