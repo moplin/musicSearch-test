@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static(__dirname));
 
 // set the home page route
-aapp.get('/', function(req, res) {
+app.get('/', function(req, res) {
     res.sendfile('index.html', {root: __dirname })
 });
 
