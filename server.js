@@ -16,6 +16,6 @@ app.get('/', function(req, res) {
 var server = app.listen(process.env.PORT || 80);
 
 app.listen(server, function() {
-    console.log('Our app is running on +++ http://localhost:' + port +' ++');
+    console.log('Our app is running on +++ http://localhost:' + server +' ++');
     console.log('Pablo Palacios');
 });
