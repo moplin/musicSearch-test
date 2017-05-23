@@ -19,6 +19,11 @@
 
     /* @ngInject */
     function BodyController() {
+        var vm = this;
+        vm.title = 'ehlo';
+        vm.hero = {
+            name: 'Miles Bronson'
+        };
 
     }
 })();

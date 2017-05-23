@@ -24,7 +24,8 @@
     "lodash": "^4.17.4",
     "ng-lodash": "^0.5.0",
     "angular-img-cropper": "^1.1.0",
-    "angular-fontawesome": "^1.0.0"
+    "angular-fontawesome": "^1.0.0",
+    "angular-mocks": "^1.6.4"
   },
   "devDependencies": {
     "angular-mocks": "1.5.8"
